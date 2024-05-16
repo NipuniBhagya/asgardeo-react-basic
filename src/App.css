@@ -152,3 +152,98 @@ main {
     align-items: center;
     height: 100vh;
 }
+
+/* Landing Page Styles */
+
+/* Center the buttons vertically */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    
+    button {
+        padding: 10px 20px; /* Adjust the padding as needed */
+        background-color: #8eb7c3; 
+        color: white;
+        border: none;
+        width: 300px; /* Set the desired width for both buttons */
+        text-align: center; /* Center the text within the buttons */
+        font-size: medium !important;
+        font-weight: 600;
+    }
+
+    button :hover {
+        background-color: #87c1d6;
+    }
+
+    /* Add some spacing between the buttons */
+    button + button {
+        margin-top: 10px;
+    }
+}
+
+/* Login and sign up page styles */
+
+/* Basic styling for the login form */
+form {
+    min-width: 310px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid #7a7a82;
+    border-radius: 22px;
+    background-color: #2e3540d4;
+}
+
+/* Style for the heading */
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style for labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #8eb7c3;
+    box-sizing: border-box;
+    background-color: #2e3540d4;
+    border-radius: 8px;
+}
+
+/* Style for submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #8eb7c3;
+    /* background: linear-gradient(90deg, rgba(21, 53, 122, 1) 0%, rgba(61, 152, 198, 1) 100%); */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: medium !important;
+    font-weight: 600;
+}
+
+/* Hover effect for submit button */
+button[type="submit"]:hover {
+    background-color: #87c1d6;
+}
+
+.with-bg {
+    @extend .container-center;
+    background: url("https://i.pinimg.com/originals/02/99/e2/0299e218089636082a66c5abed3e1464.jpg");
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}

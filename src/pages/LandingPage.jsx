@@ -1,10 +1,10 @@
 import viteLogo from "../../public/vite.svg";
 import reactLogo from "../assets/react.svg";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const LandingPage = () => {
     
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     return (
         <div className='container-center'>
@@ -17,10 +17,10 @@ export const LandingPage = () => {
                 </a>
             </div>
             <h1>Vite + React</h1>
-            {/* <div className='button-container'>
+            <div className='button-container'>
                 <button onClick={ () => navigate("/login") }>Sign In</button>
                 <button onClick={ () => navigate("/signup") }>Create Account</button>
-            </div> */}
+            </div>
         </div>
     );
 };
