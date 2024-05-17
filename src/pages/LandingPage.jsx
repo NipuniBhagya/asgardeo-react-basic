@@ -1,10 +1,12 @@
 import viteLogo from "../../public/vite.svg";
 import reactLogo from "../assets/react.svg";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "@asgardeo/auth-react";
 
 export const LandingPage = () => {
     
     const navigate = useNavigate();
+    const { signIn } = useAuthContext();
 
     return (
         <div className='container-center'>
@@ -18,7 +20,7 @@ export const LandingPage = () => {
             </div>
             <h1>Vite + React</h1>
             <div className='button-container'>
-                <button onClick={ () => navigate("/login") }>Sign In</button>
+                <button onClick={ () => signIn() }>Sign In</button>
                 <button onClick={ () => navigate("/signup") }>Create Account</button>
             </div>
         </div>
