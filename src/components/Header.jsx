@@ -1,23 +1,44 @@
+import { useEffect, useState } from "react";
+import { useAuthContext } from "@asgardeo/auth-react";
+
 export const Header = () => {
+
+    const { state, signOut, getDecodedIDToken } = useAuthContext();
+
+    const [ isResourcesAllowed, setIsResourcesAllowed ] = useState();
+
+    // Filter the display of Insights section based on the application role.
+    useEffect(() => {
+        getDecodedIDToken()
+            .then((decodedIdToken) => {
+                console.log("Decoded ID token", decodedIdToken);
+                if (decodedIdToken?.application_roles === "Anime_App_Manager") {
+                    setIsResourcesAllowed(true);
+                }
+            })
+            .catch((error) => {
+                console.error("Error occurred while decoding the ID token", error);
+            });
+    }, [getDecodedIDToken, state]);
+
     return (
         <header>
             <div className='navbar'>
-                {/* <div className='left-panel'>
-                        <div onClick={() => navigate(AppConstants.getPaths().get("HOME"))}>
-                            <img alt='react-logo' src={ASGARDEO_LOGO} className='asgardeo-logo-image-small' />
-                        </div>
-                    </div> */}
                 <div className='center-panel' id='center-panel'>
                     <a href='/home' className='nav active' id='home'>
                         Home
                     </a>
-                    <a href='/settings' className='nav' id='setting'>
-                        Settings
+                    <a href='/my-list' className='nav active' id='home'>
+                        My List
                     </a>
+                    { true && (
+                        <a href='/insights' className='nav' id='setting'>
+                            Insights
+                        </a>
+                    ) }
                 </div>
                 <div className='right-panel'>
-                    {/* <a href='/profile'>{state?.displayName ?? state?.username}</a> */}
-                    <a href='/profile' className='nav' id='profile'>
+                    <a onClick={ () => signOut() } className='nav' id='profile'>
                         Profile
                     </a>
                 </div>

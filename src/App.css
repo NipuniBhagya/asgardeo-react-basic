@@ -247,3 +247,277 @@ button[type="submit"]:hover {
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
+
+.insights-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 125px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #313131;
+}
+
+.search-bar {
+    margin: 45px 138px 0px;
+    max-width: 40px;
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    background-color: #313131;
+    border: 1px solid #969593;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.search-button {
+    background-color: #313131;
+    border: 1px solid #969593;
+    padding: 10px 20px;
+    color: #fff;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 110px;
+}
+
+.movie-card {
+    margin: 15px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid #8eb7c3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgb(41 44 49 / 70%);
+}
+
+.movie-card:hover {
+    box-shadow: 0 0 10px #8eb7c3;
+}
+
+.card-icon {
+    font-size: 2em;
+}
+
+.card-content h2 {
+    margin: 10px 0 5px 0;
+}
+
+.card-content p {
+    margin: 0 0 20px 0;
+}
+
+.service-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.graph-container {
+    margin: -14px 0 0px;
+    background: #3a3a3e;
+    padding: 0 84px;
+}
+
+.graph-title {
+    padding: 30px 57px 0px;
+}
+
+.quiz-chartTip {
+    padding: 5px 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 4px;
+    background-color: rgba(255,255,255,.9);
+    box-shadow: 3px 3px 10px rgba(0,0,0,.1);
+    position: absolute;
+    z-index: 50;
+    max-width: 250px;
+}
+
+.quiz-graph {
+    padding: 30px 40px; 
+    height: 370px;
+    width: 93%;
+}
+
+.quiz-graph .x-labels {
+    text-anchor: middle;
+}
+
+.quiz-graph .y-labels {
+    text-anchor: end;
+}
+
+.quiz-graph .quiz-graph-grid {
+    stroke: #ccc;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+}
+
+.label-title {
+    text-anchor: middle;
+    text-transform: uppercase;
+    font-size: 12px;
+    fill: gray;
+}
+
+.quiz-graph-dot, .quiz-graph-start-dot{
+    fill: rgba(0,112,210,1);
+    stroke-width: 2;
+    stroke: white;   
+}
+
+.stats {
+    margin: 50px 138px;
+}
+
+
+.hero-section {
+    margin: 0;
+    background: url("assets/naruto-bg.png");
+    height: 14vh;
+    padding: 66px;  
+}
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+  .text-content {
+    max-width: 60%;
+    padding-left: 50px;
+  }
+  
+  .text-content h1 {
+    margin: 0;
+    font-size: 26px;
+  }
+  
+  .text-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #bcc0c4;
+  }
+  
+  .image-content img {
+    max-width: 200px;
+    border-radius: 10px;
+  }
+
+  .movie-image {
+    width: 220px;
+    min-height: 178px;
+}
+  
+  .main {
+    padding: 20px 0;
+  }
+  
+  .search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .category {
+    margin-bottom: 40px;
+  }
+  
+  .category h2 {
+    margin: 0 0 20px 0px;
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .left-arrow {
+    margin-right: 10px;
+  }
+  
+  .right-arrow {
+    margin-left: 10px;
+  }
+  
+  .carousel-content {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
+.hero-button {
+    border: 1px solid #87c1d6;
+    margin-top: 10px;
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 0.45em;
+}
+
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+}
+
+.movie-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px 120px;
+}

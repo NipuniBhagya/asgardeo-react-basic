@@ -6,7 +6,7 @@ import { useAuthContext } from "@asgardeo/auth-react";
 export const LandingPage = () => {
     
     const navigate = useNavigate();
-    const { signIn } = useAuthContext();
+    const { state, signIn, signOut } = useAuthContext();
 
     return (
         <div className='container-center'>
@@ -20,7 +20,13 @@ export const LandingPage = () => {
             </div>
             <h1>Vite + React</h1>
             <div className='button-container'>
-                <button onClick={ () => signIn() }>Sign In</button>
+                {
+                    state?.isAuthenticated ? (
+                        <button onClick={ () => signOut() }>Sign Out</button>
+                    ) : (
+                        <button onClick={ () => signIn() }>Sign In</button>
+                    )
+                }
                 <button onClick={ () => navigate("/signup") }>Create Account</button>
             </div>
         </div>
