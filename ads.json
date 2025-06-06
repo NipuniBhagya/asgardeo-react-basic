@@ -13,6 +13,9 @@
             "social-logins"
         ],
         "noDirectLaunch": [],
-        "configs": {}
+        "configs": {
+            "wso2.signup": {}
+        },
+        "name": "Signup flow"
     }
 }
