@@ -1,1 +1,18 @@
-{}
+{
+    "Signup flow": {
+        "projectName": "Signup flow",
+        "description": "This is a signup flow",
+        "type": "community",
+        "author": "NipuniBhagya",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/NipuniBhagya/asgardeo-react-basic",
+        "githubUri": "https://github.com/NipuniBhagya/asgardeo-react-basic",
+        "license": "apache-2.0",
+        "lastUpdated": "1749201328376",
+        "tags": [
+            "social-logins"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
+    }
+}
